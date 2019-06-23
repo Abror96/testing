@@ -80,7 +80,7 @@ public class SchemeClass extends ApplicationAdapter {
 
     private void touching_checking() {
         if (Gdx.input.isTouched()) {
-            checking_touch_rectangle.setPosition(Gdx.input.getX(), Gdx.input.getY());
+            checking_touch_rectangle.setPosition(Gdx.input.getX(), Gdx.input.getY()); 
             for (int i = 0; i < rack_objects.size(); i++) {
                 if (intersect(checking_touch_rectangle, rack_objects.get(i), checking_touch_rectangle)) {
                     onClickListener.onRackClicked(i+" удача");
